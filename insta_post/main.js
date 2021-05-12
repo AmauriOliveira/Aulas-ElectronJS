@@ -2,11 +2,14 @@ const { app, BrowserWindow } = require('electron');
 
 function createWindow() {
 	const win = new BrowserWindow({
-		width: 800,
-		height: 600,
-		autoHideMenuBar: true, // hide menu bar
+		width: 400,
+		height: 300,
+		//autoHideMenuBar: true, // hide menu bar
+		//frame: false, // esconde tudo em volta da janela
+		resizable: false,
+		fullscreenable: false,
 		webPreferences: {
-			nodeIntegration: 'true',
+			nodeIntegration: 'false', // não vai utilizar nada do node
 		},
 	});
 
