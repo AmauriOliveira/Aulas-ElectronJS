@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"author": "Amauri Oliveira",
 	"description": "Aula de electronJS",
-	"main": "main.js",
+	"main": "electron/main.js",
 	"license": "MIT",
 	"scripts": {
 		"start": "electron ."
