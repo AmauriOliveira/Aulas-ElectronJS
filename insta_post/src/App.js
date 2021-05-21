@@ -12,7 +12,7 @@ const App = {
 			Emitter.on('countDown-start', notify);
 			Emitter.on('countDown-end', Timer.init);
 
-			Timer.init(5);
+			Timer.init();
 		} catch (error) {
 			console.log(error.message);
 		}

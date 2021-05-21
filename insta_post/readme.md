@@ -17,9 +17,14 @@ Insta Post Reminder e um projeto feito pra praticar e melhorar minha habilidade 
 
 ## :computer: Techs
 
-- javascript
-- nodejs
-- electronJS
+[![JavaScript Badge](https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript)](#)
+[![Nodejs Badge](https://img.shields.io/badge/-Nodejs-339933?style=flat-square&logo=Node.js&logoColor=white)](#)
+[![HTML5 Badge](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](#)
+[![CSS3 Badge](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3)](#)
+[![Git Badge](https://img.shields.io/badge/-Git-black?style=flat-square&logo=git)](#)
+[![Electron Badge](https://img.shields.io/badge/-Electron-47848F?style=flat-square&logo=electron&logoColor=white)](#)
+[![GitHub Badge](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github)](#)
+[![VSCode Badge](https://img.shields.io/badge/-VSCode-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)](#)
 
 ## :star2: Contributing
 
@@ -33,7 +38,7 @@ Feel free to check [issues page](https://github.com/AmauriOliveira/Aulas-Electro
 
 ## :bow: Author
 
-**Amauri Oliveira**
+### **Amauri Oliveira**
 
 - Email: amauriibate32@hotmail.com
 - GitHub: [@AmauriOliveira](https://github.com/AmauriOliveira)
