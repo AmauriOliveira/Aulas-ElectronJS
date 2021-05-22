@@ -1,4 +1,4 @@
-# insta_post
+# Insta Post
 
 <!--
 ![banner](log.com.br)
