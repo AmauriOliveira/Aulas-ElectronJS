@@ -5,7 +5,7 @@ function App() {
   const win = require('./CreateWindow.js');
   const tray = require('./Tray.js');
 
-  const { toggle } = controlWindow(win, app);
+  const { toggle } = controlWindow(win, tray);
 
   tray.on('click', toggle);
 }
@@ -18,4 +18,4 @@ app.on('window-all-closed', () => {
   }
 });
 
-// app.dock.hide(); //esconde da barra de tarefa
+// app.dock.hide(); //esconde da barra de tarefa // TODO: implement

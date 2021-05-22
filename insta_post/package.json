@@ -1,14 +1,25 @@
 {
-	"name": "insta_post",
-	"version": "1.0.0",
-	"author": "Amauri Oliveira",
-	"description": "Aula de electronJS",
-	"main": "electron/main.js",
-	"license": "MIT",
-	"scripts": {
-		"start": "electron ."
-	},
-	"devDependencies": {
-		"electron": "^12.0.7"
-	}
+  "name": "insta-post",
+  "version": "1.0.0",
+  "author": "Amauri Oliveira",
+  "description": "Aula de electronJS",
+  "main": "electron/main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "npx electron-packager . insta-post --platform linux --arch x64 --out dist/ --overwrite",
+    "deb64": "npx electron-installer-debian --src dist/app-linux-x64/ --dest dist/installers/ --arch amd64"
+  },
+  "devDependencies": {
+    "electron": "^12.0.7"
+  },
+  "build": {
+    "appId": "com.amaurioliveira.electron-quick-start",
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "category": "Utility"
+    }
+  }
 }

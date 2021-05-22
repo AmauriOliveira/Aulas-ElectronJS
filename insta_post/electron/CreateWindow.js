@@ -2,12 +2,12 @@ const { BrowserWindow } = require('electron');
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 400,
-    height: 300,
+    width: 250,
+    height: 310,
     show: false, // * esconde da inicialização
     hasShadow: true,
-    //autoHideMenuBar: true, // * hide menu bar
-    //frame: false, // * esconde tudo em volta da janela
+    autoHideMenuBar: true, // * hide menu bar
+    frame: false, // * esconde tudo em volta da janela
     resizable: false,
     fullscreenable: false,
     webPreferences: {
@@ -17,7 +17,7 @@ function createWindow() {
 
   win.loadFile('index.html');
 
-  //TODO: Blur da Janela
+  win.on('blur', () => win.hide());
 
   return win;
 }
