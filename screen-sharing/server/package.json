@@ -1,0 +1,13 @@
+{
+  "name": "Screen-Server",
+  "version": "1.0.0",
+  "description": "Servidor para cliente socket feito com slectron",
+  "main": "index.js",
+  "repository": "https://github.com/AmauriOliveira/Aulas-ElectronJS",
+  "author": "Amauri Oliveira",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.1.2"
+  }
+}
