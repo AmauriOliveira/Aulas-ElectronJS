@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 //const path = require('path');
 
 function createWindow() {
@@ -34,3 +34,7 @@ app.on('window-all-closed', () => {
     app.quit();
   }
 });
+
+ipcMain.on('startShare', (event, args) => {});
+
+ipcMain.on('stopShare', (event, args) => {});
