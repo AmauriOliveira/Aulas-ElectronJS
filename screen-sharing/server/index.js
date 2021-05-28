@@ -12,6 +12,11 @@ io.on('connection', socket => {
     socket.join(roomId);
     console.log(`User join in a room : ${roomId}`);
   });
+
+  socket.on('screen-data', data => {
+    const { room, image } = JSON.parse(data);
+    socket.broadcast.to(room).emit('screen-data', image);
+  });
 });
 
 http.listen(process.env.PORT || '3000', () => console.log('🔥🚀'));
