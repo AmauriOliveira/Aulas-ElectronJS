@@ -1,6 +1,10 @@
 const ipcRenderer = require('electron').ipcRenderer;
 
-window.onload = () => {};
+window.onload = () => {
+  ipcRenderer.on('uuid', (event, data) => {
+    document.getElementById('code').innerHTML = data;
+  });
+};
 
 function startShare() {
   ipcRenderer.send('startShare', {});
@@ -9,6 +13,6 @@ function startShare() {
 }
 function stopShare() {
   ipcRenderer.send('stopShare', {});
-  document.getElementById('start').style.display = 'black';
+  document.getElementById('start').style.display = 'block';
   document.getElementById('stop').style.display = 'none';
 }

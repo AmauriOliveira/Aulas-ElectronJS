@@ -7,8 +7,11 @@ app.get('/view', (request, response) => {
   response.sendFile(path.join(__dirname, 'display.html'));
 });
 
-io.on('connection',(socket)=>{
-  
-})
+io.on('connection', socket => {
+  socket.on('join-message', roomId => {
+    socket.join(roomId);
+    console.log(`User join in a room : ${roomId}`);
+  });
+});
 
-app.listen(process.env.PORT || '3000', () => console.log('🔥🚀'));
+http.listen(process.env.PORT || '3000', () => console.log('🔥🚀'));

@@ -1,18 +1,23 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
-//const path = require('path');
+const { v4: uuidv4 } = require('uuid');
+const screenshot = require('screenshot-desktop');
 
+//const path = require('path');
+const socket = require('socket.io-client')('http://localhost:3000');
+let interval;
 function createWindow() {
   const win = new BrowserWindow({
     width: 500,
     height: 150,
     hasShadow: true,
-    autoHideMenuBar: true, // * hide menu bar
-    resizable: false,
-    fullscreenable: false,
+    // autoHideMenuBar: true, // * hide menu bar
+    // resizable: false,
+    // fullscreenable: false,
     webPreferences: {
       // TODO: Check
       //preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: true,
+      contextIsolation: false,
     },
   });
 
@@ -35,6 +40,10 @@ app.on('window-all-closed', () => {
   }
 });
 
-ipcMain.on('startShare', (event, args) => {});
+ipcMain.on('startShare', (event, args) => {
+  const uuid = uuidv4();
+  socket.emit('join-message', uuid);
+  event.reply('uuid', uuid);
+});
 
 ipcMain.on('stopShare', (event, args) => {});

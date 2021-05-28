@@ -10,9 +10,6 @@
     "build": "npx electron-packager . insta-post --platform linux --arch x64 --out dist/ --overwrite",
     "deb64": "npx electron-installer-debian --src dist/app-linux-x64/ --dest dist/installers/ --arch amd64"
   },
-  "devDependencies": {
-    "electron": "^12.0.7"
-  },
   "build": {
     "appId": "com.amaurioliveira.electron-quick-start",
     "linux": {
@@ -23,7 +20,9 @@
     }
   },
   "dependencies": {
+    "electron": "^12.0.7",
     "screenshot-desktop": "^1.12.3",
-    "socket.io-client": "^4.1.2"
+    "socket.io-client": "^4.1.2",
+    "uuid": "^8.3.2"
   }
 }
